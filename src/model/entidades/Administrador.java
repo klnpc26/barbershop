@@ -13,9 +13,14 @@ public class Administrador implements Serializable{
 	
 	public Administrador() {
 	}
+	
+	public Administrador(String nome_admin, String email, String senha) {
+		this.nome_admin = nome_admin;
+		this.email = email;
+		this.senha = senha;
+	}
 
 	public Administrador(Integer id_admin, String nome_admin, String email, String senha) {
-		super();
 		this.id_admin = id_admin;
 		this.nome_admin = nome_admin;
 		this.email = email;
