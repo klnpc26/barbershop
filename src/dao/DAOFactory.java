@@ -2,6 +2,7 @@ package dao;
 
 import Conn.BD;
 import JDBC.AdministradorJDBC;
+import JDBC.ServicoJDBC;
 
 public class DAOFactory {
 	
@@ -16,8 +17,8 @@ public class DAOFactory {
 //	public static BarbeiroDao criandoBarbeiroDao() {
 //		return new BrbeiroJDBC(BD.conexao());
 //	}
-//	
-//	public static ServicoDao criandoServicoDao() {
-//		return new ServicoJDBC(BD.conexao());
-//	}
+	
+	public static ServicoDao criandoServicoDao() {
+		return new ServicoJDBC(BD.conexao());
+	}
 }

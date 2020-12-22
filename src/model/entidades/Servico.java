@@ -6,28 +6,33 @@ public class Servico implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	private Integer id_serv;
+	private Integer id_servico;
 	private String tipo_servico;
 	private Integer tempo_servico;
 	private Double valor;
 	
 	public Servico() {
 	}
-
-	public Servico(Integer id_serv, String tipo_servico, Integer tempo_servico, Double valor) {
-		super();
-		this.id_serv = id_serv;
+	
+	public Servico(String tipo_servico, Integer tempo_servico, Double valor) {
+		this.tipo_servico = tipo_servico;
+		this.tempo_servico = tempo_servico;
+		this.valor = valor;
+	}
+	
+	public Servico(Integer id_servico, String tipo_servico, Integer tempo_servico, Double valor) {
+		this.id_servico = id_servico;
 		this.tipo_servico = tipo_servico;
 		this.tempo_servico = tempo_servico;
 		this.valor = valor;
 	}
 
-	public Integer getId_serv() {
-		return id_serv;
+	public Integer getId_servico() {
+		return id_servico;
 	}
 
-	public void setId_serv(Integer id_serv) {
-		this.id_serv = id_serv;
+	public void setId_servico(Integer id_servico) {
+		this.id_servico = id_servico;
 	}
 
 	public String getTipo_servico() {
@@ -58,7 +63,7 @@ public class Servico implements Serializable{
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((id_serv == null) ? 0 : id_serv.hashCode());
+		result = prime * result + ((id_servico == null) ? 0 : id_servico.hashCode());
 		return result;
 	}
 
@@ -71,17 +76,17 @@ public class Servico implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		Servico other = (Servico) obj;
-		if (id_serv == null) {
-			if (other.id_serv != null)
+		if (id_servico == null) {
+			if (other.id_servico != null)
 				return false;
-		} else if (!id_serv.equals(other.id_serv))
+		} else if (!id_servico.equals(other.id_servico))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Servico [id_serv=" + id_serv + ", tipo_servico=" + tipo_servico + ", tempo_servico=" + tempo_servico
+		return "Servico [id_serv=" + id_servico + ", tipo_servico=" + tipo_servico + ", tempo_servico=" + tempo_servico
 				+ ", valor=" + valor + "]";
 	}
 }
